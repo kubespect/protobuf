@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/kubespect/agent/xdp";
+option go_package = "github.com/kubespect/protobuf/xdp";
 
 package xdp;
 

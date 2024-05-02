@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v5.26.1
-// source: xdp.proto
+// source: xdp/xdp.proto
 
 package xdp
 
@@ -128,5 +128,5 @@ var XDP_ServiceDesc = grpc.ServiceDesc{
 			ServerStreams: true,
 		},
 	},
-	Metadata: "xdp.proto",
+	Metadata: "xdp/xdp.proto",
 }
