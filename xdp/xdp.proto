@@ -5,14 +5,10 @@ option go_package = "github.com/kubespect/protobuf/xdp";
 package xdp;
 
 service XDP {
-    rpc GetPacketStream (GetXDPRequest) returns (stream GetXDPResponse) {}
+    rpc XDPStream (stream XDPRequest) returns (XDPResponse) {}
 }
 
-message GetXDPRequest {
-    string interface = 1;
-}
-
-message GetXDPResponse {
+message XDPRequest {
     uint32 SrcIP = 1;
     uint32 DstIP = 2;
     uint32 SrcPort = 3;
@@ -23,3 +19,6 @@ message GetXDPResponse {
     uint32 Window = 8;
 }
 
+message XDPResponse {
+    string interface = 1;
+}
