@@ -9,14 +9,9 @@ service XDP {
 }
 
 message XDPRequest {
-    uint32 SrcIP = 1;
-    uint32 DstIP = 2;
-    uint32 SrcPort = 3;
-    uint32 DstPort = 4;
-    uint32 Seq = 5;
-    uint32 Ack = 6;
-    uint32 Flags = 7;
-    uint32 Window = 8;
+    uint64 timestamp = 1;
+    uint32 len = 2;
+    bytes data = 3;
 }
 
 message XDPResponse {
